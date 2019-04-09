@@ -6,21 +6,7 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
-    def maxIndex(self, nums, l, r):
-        if r == len(nums) and l==0:
-            return nums.index(max(nums))
-        else:
-            numspar = nums[l:r]
-            return nums.index(max(numspar))
 
-    def way(self, nums, l, r):
-        if nums == []:
-            return None
-        maxindex = self.maxIndex(nums, l, r)
-        root = TreeNode(nums[maxindex])
-        root.left = self.way(nums, l, maxindex)
-        root.right = self.way(nums, maxindex+1, r)
-        return root
     def maxTree(self,nums):
         maxIndex = nums.index(max(nums))
         node = TreeNode(nums[maxIndex])
