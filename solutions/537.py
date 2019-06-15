@@ -1,5 +1,6 @@
 class Solution:
     def complexNumberMultiply(self, a: str, b: str) -> str:
+
         a = self.getPart(a)
         b = self.getPart(b)
         complex1 = a[0]*b[0]+(-1)*b[1]*a[1]
